@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambar Mobil</title>
+    <script>
+        function gambar(){
+            let pict = document.getElementById("gambar").value;
+            alert("Ini gambar "+ pict);
+            if (pict == "90an.jpg"){
+                document.getElementById("muncul_gambar").src="90an.jpg";
+            }
+            else if (pict == "lambo.jpg"){
+                document.getElementById("muncul_gambar").src="lambo.jpg";
+            }
+            else if (pict == "bucati.jpg"){
+                document.getElementById("muncul_gambar").src="bucati.jpg";
+            }
+            else if (pict == "ferari.jpg"){
+                document.getElementById("muncul_gambar").src="ferari.jpg";
+            }
+            else if (pict == "brio.jpg"){
+                document.getElementById("muncul_gambar").src="brio.jpg";
+            }
+            else if (pict == "i8.jpg"){
+                document.getElementById("muncul_gambar").src="i8.jpg";
+            }
+            else if (pict == "pajero.jpg"){
+                document.getElementById("muncul_gambar").src="pajero.jpg";
+            }
+        }
+    </script>
+    <style>
+        div {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            padding: 20px;
+            width: 50%;
+            background-color: beige;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <select id="gambar" name="gambar" onchange="gambar()">
+            <option value="90an.jpg">Clasic</option>
+            <option value="lambo.jpg">Lambo</option>
+            <option value="bucati.jpg">Bucati</option>
+            <option value="ferari.jpg">Ferari</option>
+            <option value="brio.jpg">Brio</option>
+            <option value="i8.jpg">i8</option>
+            <option value="pajero.jpg">Pajero</option>
+        </select>
+        <br/>
+        <img id="muncul_gambar" src="90an.jpg" alt="munculgambar" style="width: 50%;">
+    </div>
+</body>
+</html>
